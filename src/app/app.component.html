@@ -1,3 +1,25 @@
-This is a test string
-<br /><br /><br />
-{{"This is another test string" | reverse:false:"doublequote"}}
+<div *ngIf="someRandomVariable; then trueBlock; else falseBlock"></div>
+<!-- ng if -->
+<ng-template #falseBlock>
+  <div>
+    <h1>No!!!</h1>
+  </div>
+</ng-template>
+
+<ng-template #trueBlock>
+  <div>
+    <h1>Yes!!!</h1>
+  </div>
+</ng-template>
+<!-- ngNonBindable -->
+<h1>Interpolation</h1>
+<p>Interpolation is a way angular uses to display variables inside your HTML using the curly braces. You can display a variable named <b>name</b> using <span ngNonBindable>{{name}}</span></p>
+<!-- ng for and class -->
+<ul>
+  <li *ngFor="let info of data">
+    <span [ngClass]="{
+      'javascript': info.lang === 'JavaScript',
+      'swift': info.lang === 'Swift'
+    }"> {{info.lang}}</span> is mostly used on {{info.usedOn}}
+  </li>
+</ul>
