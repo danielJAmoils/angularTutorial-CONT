@@ -6,20 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  someRandomVariable = false
-  data = [
-    {
-      lang: 'JavaScript',
-      usedOn: 'web'
-    },
-    {
-      lang: 'Swift',
-      usedOn: 'ios'
-    }
-  ]
-  constructor() {
-    setInterval(() => {
-      this.someRandomVariable = !this.someRandomVariable
-    }, 1000)
-  }
+  
+  constructor() { }
 }
